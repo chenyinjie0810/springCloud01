@@ -1,0 +1,17 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/pt_kaifa
+      username: root
+      password: cyj7416146
+      driver-class-name: org.gjt.mm.mysql.Driver
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis\u914D\u7F6E\u6587\u4EF6\u6240\u5728\u8DEF\u5F84
+  type-aliases-package: com.chenyj.api.pojo # \u6240\u6709Entity\u522B\u540D\u7C7B\u6240\u5728\u5305
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml

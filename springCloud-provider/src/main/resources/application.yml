@@ -1,0 +1,30 @@
+server:
+  port: 8001
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.chenyj.pojo
+  mapper-locations:
+    - classpath:mybatis/mapper/**/*.xml
+
+spring:
+  application:
+    name: springCloudprovider-dept
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: dbc:mysql://localhost:3306/cloud01
+      username: root\uFF1A
+      password: cyj7416146
+#    type: com.alibaba.druid.pool.DruidDataSource            # \u5F53\u524D\u6570\u636E\u6E90\u64CD\u4F5C\u7C7B\u578B
+#    driver-class-name: com.mysql.cj.jdbc.Driver             # mysql\u9A71\u52A8\u5305
+##    driver-class-name: org.gjt.mm.mysql.Driver              # mysql\u9A71\u52A8\u5305
+#    url: jdbc:mysql://localhost:3306/cloud01              # \u6570\u636E\u5E93\u540D\u79F0
+#    username: root
+#    password: cyj7416146
+#    dbcp2:
+#      min-idle: 5                                           # \u6570\u636E\u5E93\u8FDE\u63A5\u6C60\u7684\u6700\u5C0F\u7EF4\u6301\u8FDE\u63A5\u6570
+#      initial-size: 5                                       # \u521D\u59CB\u5316\u8FDE\u63A5\u6570
+#      max-total: 5                                          # \u6700\u5927\u8FDE\u63A5\u6570
+#      max-wait-millis: 200
