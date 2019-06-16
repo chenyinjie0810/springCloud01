@@ -13,15 +13,15 @@ import lombok.experimental.Accessors;
  */
 @AllArgsConstructor
 @Data
-//@NoArgsConstructor
+@NoArgsConstructor
 @Accessors(chain=true)
 public class Dept {
 
-   /* private Long id;
+    private Long id;
     private String last_name;
     private String db_source;
 
-    public Long getId() {
+    /*public Long getId() {
         return id;
     }
 
